@@ -1,107 +1,163 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+
+  box-shadow: 0px 4px 40px -20px rgba(0, 0, 0, 0.25);
 }
 
-/* CABEÇALHO */
 .filtersContainer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  gap: 400px;
 }
 
-.estiloGeralBotoes{
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: block;
-    font-size: 0.9rem;
+.filtersContainer .divBotao {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
 }
 
-.estiloGeralBotoes--mostrarTodos {
-    color: black;
-    background-color: #d3d3d3;
+.estiloGeralBotoes {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: rgba(18, 184, 134, 0.05);
+  color: #12b886;
 }
-
-.estiloGeralBotoes--filtrarHortifruti {
-    background-color: tomato;
+.estiloGeralBotoes:focus{
     color: white;
+    background-color: #12b886;
 }
 
 .containerBuscaPorNome {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .campoBuscaPorNome {
+  background-color: #F1F3F5;
     border-radius: 5px 0 0 5px;
-    border: 1px solid black;
-    padding: 0 10px;
+  border: 1px solid #F1F3F5;
+  padding: 0 10px;
+  width: 200px;
+}
+input::placeholder{
+    color: black;
 }
 
-.estiloGeralBotoes--botaoBuscaPorNome {
-    background-color: rgb(17, 17, 20);
-    color: white;
-    border-radius: 0 5px 5px 0;
+.botaoBuscaPorNome {
+  background-color: #12b886;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-/* CONTEÚDO */
-main{}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .containerListaProdutos {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .containerListaProdutos ul {
-    list-style: none;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .containerListaProdutos ul li {
-    color: black;
-    font-weight: bold;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    transition: ease-in-out .1s;
-    width: 20%;
-}
-
-.containerListaProdutos ul li:hover {
-    box-shadow: 3px 3px 13px 1px rgb(146 146 146);
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 5px;
+  transition: ease-in-out 0.1s;
+  width: 20%;
 }
 
 .containerListaProdutos ul li img {
-    width: 100%;
-    max-width: 80px;
+  width: 100%;
 }
 
 .containerListaProdutos ul li h3 {
-    font-size: 1.5rem;
+  color: black;
+  font-size: 1rem;
+  text-align: left;
+  margin-top: 15px;
 }
 
 .containerListaProdutos ul li p {
-    font-size: 1.5rem;
+  color: black;
+  font-size: 0.8rem;
+  text-align: left;
+  margin-top: 15px;
 }
 .containerListaProdutos ul li span {
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-top: 10px;
-    display: inline-block;
+  color: #868e96;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 15px;
+  display: flex;
 }
 
-/* PREÇO TOTAL */
-.containerPrecoTotal{
-    text-align: center;
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.containerPrecoTotal p{
-    font-size: 1.4rem;
-    font-weight: 600;
+
+.containerPrecoTotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 1200px;
+  height: 56px;
+  box-shadow: 0px 4px 40px -20px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+
+  padding: 14px;
 }
-.containerPrecoTotal p span{}
+.containerPrecoTotal p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.containerPrecoTotal span {
+  width: 82px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+}
